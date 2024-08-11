@@ -6,15 +6,15 @@ import b3 from "../../assets/b3.avif";
 
 const Banner = () => {
   return (
-    <Carousel>
-      <div className="border-4 border-red-400">
+    <Carousel autoPlay infiniteLoop>
+      <div >
         <img src={b1} className="" />
       </div>
 
-      <div className=" border-8 border-red-400">
+      <div >
         <img src={b2} />
       </div>
-      <div className=" border-8 border-red-400">
+      <div className=" ">
         <img src={b3}/>
       </div>
     

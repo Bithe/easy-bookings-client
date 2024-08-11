@@ -2,9 +2,10 @@ import logoVideo from "../../../../public/logoVideo.mp4";
 
 const Navbar = () => {
   return (
-    <div className="container mx-auto lg:px-20 lg:py-2">
-      <div className="navbar bg-base-100">
+    <div className="container mx-auto  lg:px-20 lg:py-2 fixed bg-opacity-50 z-10 bg-white">
+      <div className="navbar ">
         <div className="navbar-start">
+          
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -48,8 +49,8 @@ const Navbar = () => {
 
           {/* LOGO VIDEO */}
           <video
-            style={{ height: "8rem" }}
-            className="videoTag "
+            style={{ height: "6rem" }}
+            className="videoTag hidden lg:block"
             autoPlay
             loop
             muted
@@ -59,7 +60,7 @@ const Navbar = () => {
 
           {/*  */}
         </div>
-        <div className="navbar-center hidden lg:flex">
+        {/* <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
               <a>Item 1</a>
@@ -81,7 +82,7 @@ const Navbar = () => {
               <a>Item 3</a>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="navbar-end gap-4">
           <a className="btn bg-[#3b56d0] text-white hover:bg-white hover:text-[#3b56d0]">Register</a>
           <a className="btn bg-[#3b56d0] text-white hover:bg-white hover:text-[#3b56d0]">Login</a>

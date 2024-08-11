@@ -15,28 +15,7 @@ const Footer = () => {
                   >
                     <g fill="none" fillRule="evenodd">
                       <g transform="translate(0 -75)">
-                        <g transform="translate(0 75)">
-                          <rect
-                            width="512"
-                            height="512"
-                            rx="128"
-                            fill="#3D5AFE"
-                          ></rect>
-                          <rect
-                            x="149"
-                            y="176"
-                            width="220"
-                            height="220"
-                            fill="#fff"
-                          ></rect>
-                          <circle cx="259" cy="156" r="40" fill="#fff"></circle>
-                          <circle
-                            cx="369"
-                            cy="286"
-                            r="40"
-                            fill="#2962FF"
-                          ></circle>
-                        </g>
+                 
                         <text
                           fill="white"
                           fontFamily="Nunito-Bold, Nunito"
@@ -44,7 +23,7 @@ const Footer = () => {
                           fontWeight="bold"
                         >
                           <tspan x="654" y="518">
-                            Tailwindow
+                            Easy Booking
                           </tspan>
                         </text>
                       </g>
