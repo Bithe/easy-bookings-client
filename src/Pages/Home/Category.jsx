@@ -13,11 +13,17 @@ import c4 from '../../assets/c4.jpg';
 import c5 from '../../assets/c5.jpg';
 import c6 from '../../assets/c6.jpg';
 import c7 from '../../assets/c7.jpg';
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
     <div>
-      <Swiper
+<SectionTitle subHeading={"Once you find the perfect flight, simply select it"} headiing={"Select Your Place"}>
+    
+</SectionTitle>
+
+     <section>
+     <Swiper
         slidesPerView={4}
         spaceBetween={30}
         centeredSlides={true}
@@ -25,39 +31,40 @@ const Category = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper "
+        className="mySwiper  "
       >
         <SwiperSlide className="pb-24 ">
             <img src={c1} className=" "></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c2} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c3} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c4} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c5} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c6} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={c7} className=""></img>
-            <h3 className="text-3xl text-white font-extrabold uppercase text-center -mt-24">Beach</h3>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">Beach</h3>
         </SwiperSlide>
       
        
       </Swiper>{" "}
+     </section>
     </div>
   );
 };
