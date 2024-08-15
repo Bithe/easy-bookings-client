@@ -1,6 +1,7 @@
 // import Categories from "../../Components/Categories/Categories";
 // import Banner from "./Banner";
 // import Category from "./Category";
+import FilterComponent from "./FilterComponent";
 import SearchBanner from "./SearcBanner";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
 
         {/* FOR SEARCHING ALL THINGS */}
         <SearchBanner></SearchBanner>
+        <FilterComponent></FilterComponent>
     </div>
   );
 };
