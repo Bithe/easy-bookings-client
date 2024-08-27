@@ -7,10 +7,10 @@ const SearchBanner = () => {
                 >
                     <div>
                         <h1 className="text-white text-center xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl font-semibold bg-gray-800 p-2 bg-opacity-40 rounded-sm">
-                            Discover Your New Home
+                            Discover Your New Home, Electronics and Computers
                         </h1>
                     </div>
-                    <div className="w-full mx-auto">
+                    {/* <div className="w-full mx-auto">
                         <form className="flex items-center justify-center">
                             <div className="xl:w-1/2 lg:w-[60%] md:w-[70%] sm:w-[70%] xs:w-[90%] mx-auto flex gap-2 md:mt-6 xs:mt-4 mx-4">
                                 <input
@@ -26,7 +26,7 @@ const SearchBanner = () => {
                                 </button>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </div>

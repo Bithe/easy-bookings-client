@@ -1,138 +1,150 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const FilterComponent = () => {
-  const [brand, setBrand] = useState('');
-  const [category, setCategory] = useState('');
-  const [priceRange, setPriceRange] = useState([0, 1000]);
-  const [ratings, setRatings] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+  const [brand, setBrand] = useState('');
+  const [priceMin, setPriceMin] = useState('');
+  const [priceMax, setPriceMax] = useState('');
+  const [sort, setSort] = useState('');
 
   useEffect(() => {
-    fetchFilteredProducts();
-  }, [brand, category, priceRange, ratings, startDate, endDate]);
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
 
-  const fetchFilteredProducts = () => {
-    // API call to fetch filtered products
-    // Example: `/api/products?brand=${brand}&category=${category}&minPrice=${priceRange[0]}&maxPrice=${priceRange[1]}&ratings=${ratings}&startDate=${startDate}&endDate=${endDate}`
+        const { data } = await axios.get('http://localhost:5000/products', {
+          params: {
+            page,
+            search,
+            category,
+            brand,
+            priceMin,
+            priceMax,
+            sort,
+          },
+        });
+        
+
+        setProducts(data.products); 
+        setTotalPages(data.totalPages);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [page, search, category, brand, priceMin, priceMax, sort]);
+
+  const handleSearchChange = (e) => setSearch(e.target.value);
+  const handleCategoryChange = (e) => setCategory(e.target.value);
+  const handleBrandChange = (e) => setBrand(e.target.value);
+  const handlePriceMinChange = (e) => setPriceMin(e.target.value);
+  const handlePriceMaxChange = (e) => setPriceMax(e.target.value);
+  const handleSortChange = (e) => setSort(e.target.value);
+
+  const handlePrevPage = () => {
+    if (page > 1) setPage(page - 1);
+  };
+
+  const handleNextPage = () => {
+    if (page < totalPages) setPage(page + 1);
   };
 
   return (
-    <div className="flex flex-col md:flex-row">
-      
-      {/* Filter Sidebar or Dropdowns */}
-      <div className="w-full md:w-1/4 bg-gray-100 p-4 space-y-4">
-        <h2 className="text-xl font-semibold mb-4">Filter Products</h2>
-        
-        {/* Brand Filter */}
-        <div className="filter-group">
-          <label htmlFor="brand" className="block text-sm font-medium text-gray-700">Brand Name</label>
-          <select
-            id="brand"
-            value={brand}
-            onChange={(e) => setBrand(e.target.value)}
-            className="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          >
-            <option value="">All Brands</option>
-            <option value="brand1">Brand 1</option>
-            <option value="brand2">Brand 2</option>
-            {/* Add more brand options here */}
-          </select>
-        </div>
-        
-        {/* Category Filter */}
-        <div className="filter-group">
-          <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category</label>
-          <select
-            id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          >
-            <option value="">All Categories</option>
-            <option value="living-room">Living Room</option>
-            <option value="kitchen">Kitchen</option>
-            {/* Add more category options here */}
-          </select>
-        </div>
-        
-        {/* Price Range Filter */}
-        <div className="filter-group">
-          <label htmlFor="price-range" className="block text-sm font-medium text-gray-700">Price Range</label>
-          <input
-            type="range"
-            id="price-range"
-            min="0"
-            max="1000"
-            value={priceRange}
-            onChange={(e) => setPriceRange([0, e.target.value])}
-            className="mt-1 w-full"
-          />
-          <div className="flex justify-between text-sm text-gray-500">
-            <span>$0</span>
-            <span>${priceRange[1]}</span>
-          </div>
-        </div>
-        
-        {/* Ratings Filter */}
-        <div className="filter-group">
-          <label htmlFor="ratings" className="block text-sm font-medium text-gray-700">Ratings</label>
-          <select
-            id="ratings"
-            value={ratings}
-            onChange={(e) => setRatings(e.target.value)}
-            className="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          >
-            <option value="">All Ratings</option>
-            <option value="4">4 stars & up</option>
-            <option value="3">3 stars & up</option>
-          </select>
-        </div>
-        
-        {/* Date Filter */}
-        <div className="filter-group">
-          <label htmlFor="start-date" className="block text-sm font-medium text-gray-700">Creation Date</label>
-          <input
-            type="date"
-            id="start-date"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          />
-          <input
-            type="date"
-            id="end-date"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          />
-        </div>
+    <div className='text-center py-8  lg:m-8 border-4 border-blue-300 rounded-lg'>
+      <h1 className='text-3xl font-bold '>Product List</h1>
 
-        <button
-          onClick={fetchFilteredProducts}
-          className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md mt-4 hover:bg-blue-600"
-        >
-          Apply Filters
-        </button>
+      <div className='flex items-center justify-between py-8 lg:m-8 '>
+        <input
+          type="text" 
+          placeholder="Search by name"
+          value={search}
+          onChange={handleSearchChange}
+        />
+        <select value={category} onChange={handleCategoryChange}>
+          <option value="">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Computers">Computers</option>
+          <option value="Home">Home</option>
+        </select>
+        <select value={brand} onChange={handleBrandChange}>
+          <option value="">All Brands</option>
+          <option value="Instant Pot">Instant Pot</option>
+          <option value="Apple">Apple</option>
+          <option value="Samsung">Samsung</option>
+          <option value="GoPro">GoPro</option>
+          <option value="Asus">Asus</option>
+          <option value="HP">HP</option>
+          <option value="Panasonic">Panasonic</option>
+          <option value="Bose">Bose</option>
+          <option value="JBL">JBL</option>
+          <option value="JBL">JBL</option>
+          <option value="Nest">Nest</option>
+          <option value="Logitech">Logitech</option>
+          <option value="Corsair">Corsair</option>
+        </select>
+        <input
+          type="number"
+          placeholder="Min Price"
+          value={priceMin}
+          onChange={handlePriceMinChange}
+        />
+        <input
+          type="number"
+          placeholder="Max Price"
+          value={priceMax}
+          onChange={handlePriceMaxChange}
+        />
+        <select value={sort} onChange={handleSortChange}>
+          <option value="">Sort By</option>
+          <option value="priceLowToHigh">Price: Low to High</option>
+          <option value="priceHighToLow">Price: High to Low</option>
+          <option value="newest">Date Added: Newest First</option>
+        </select>
       </div>
-      
-      {/* Products List */}
-      <div className="w-full md:w-3/4 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {products.map((product) => (
-          <div key={product.id} className="bg-white shadow rounded-md overflow-hidden">
-            <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">{product.name}</h3>
-              <p className="text-gray-500 text-sm">{product.description}</p>
-              <div className="flex justify-between items-center mt-2">
-                <span className="text-blue-500 font-semibold">${product.price}</span>
-                <span className="text-gray-500">{product.ratings} stars</span>
-              </div>
-            </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className='m-8'>
+          {products && products.length > 0 ? (
+            <ul>
+              {products.map((product) => (
+                <li key={product._id}>
+                  <img src={product.image} alt={product.name} width="100" />
+                  <h3>{product.name}</h3>
+                  <p>{product.description}</p>
+                  <p>Price: ${product.price}</p>
+                  <p>Category: {product.category}</p>
+                  <p>Brand: {product.brand}</p>
+                  <p>Ratings: {product.ratings}</p>
+                  <p>Date Added: {new Date(product.createdAt).toLocaleDateString()}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No products found</p>
+          )}
+          <div className='p-8'>
+            <button className='text-2xl font-bold text-blue-500 pr-8' onClick={handlePrevPage} disabled={page === 1}>
+              Previous
+            </button>
+            <button className='text-2xl font-bold text-blue-500' onClick={handleNextPage} disabled={page === totalPages}>
+              Next
+            </button>
+            <p>
+              Page {page} of {totalPages}
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logoVideo from "../../../../public/logoVideo.mp4";
 
 const Navbar = () => {
@@ -84,8 +85,32 @@ const Navbar = () => {
           </ul>
         </div> */}
         <div className="navbar-end gap-4">
-          <a className="btn bg-[#3b56d0] text-white hover:bg-white hover:text-[#3b56d0]">Register</a>
-          <a className="btn bg-[#3b56d0] text-white hover:bg-white hover:text-[#3b56d0]">Login</a>
+
+          <div className="gap-4 flex">
+              <NavLink
+                to="/login"
+                className="btn bg-[#3b56d0] text-white font-semibold text-lg hover:text-black"
+                style={{
+                  background:
+                    "linear-gradient(90deg, bg-teal-500 0%, bg-blue-500 35%, bg-blue-500 100%)",
+                }}
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/register"
+                className="btn bg-[#3b56d0] text-white font-semibold text-lg hover:text-black"
+                style={{
+                  background:
+                    "linear-gradient(90deg, bg-teal-500 0%, bg-blue-500 35%, bg-blue-500 100%)",
+                }}
+              >
+                Register
+              </NavLink>{" "}
+            </div>
+
+
+          {/*  */}
         </div>
       </div>
     </div>

@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Samsung Galaxy S21",
+    "image": "https://example.com/samsung_s21.jpg",
+    "description": "Latest Samsung smartphone with high-end specs.",
+    "price": 799,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "ratings": 4,
+    "createdAt": "2024-08-21T00:00:00.000Z"
+  },
+  {
+    "name": "Apple iPhone 13",
+    "image": "https://example.com/iphone_13.jpg",
+    "description": "Apple's latest iPhone with improved performance.",
+    "price": 999,
+    "category": "Electronics",
+    "brand": "Apple",
+    "ratings": 5,
+    "createdAt": "2024-08-20T00:00:00.000Z"
+  },
+  {
+    "name": "Sony WH-1000XM4",
+    "image": "https://example.com/sony_wh1000xm4.jpg",
+    "description": "Noise-cancelling over-ear headphones.",
+    "price": 349,
+    "category": "Electronics",
+    "brand": "Sony",
+    "ratings": 5,
+    "createdAt": "2024-08-19T00:00:00.000Z"
+  },
+  {
+    "name": "Dell XPS 13",
+    "image": "https://example.com/dell_xps_13.jpg",
+    "description": "High-performance laptop with a sleek design.",
+    "price": 1299,
+    "category": "Computers",
+    "brand": "Dell",
+    "ratings": 4,
+    "createdAt": "2024-08-18T00:00:00.000Z"
+  },
+  {
+    "name": "Bose QuietComfort 35 II",
+    "image": "https://example.com/bose_qc35_ii.jpg",
+    "description": "Wireless noise-cancelling headphones.",
+    "price": 299,
+    "category": "Electronics",
+    "brand": "Bose",
+    "ratings": 5,
+    "createdAt": "2024-08-17T00:00:00.000Z"
+  },
+  {
+    "name": "Apple AirPods Pro",
+    "image": "https://example.com/apple_airpods_pro.jpg",
+    "description": "In-ear wireless headphones with noise cancellation.",
+    "price": 249,
+    "category": "Electronics",
+    "brand": "Apple",
+    "ratings": 4,
+    "createdAt": "2024-08-16T00:00:00.000Z"
+  },
+  {
+    "name": "LG OLED55CXPUA",
+    "image": "https://example.com/lg_oled55cxpua.jpg",
+    "description": "55-inch 4K OLED TV with stunning picture quality.",
+    "price": 1799,
+    "category": "Electronics",
+    "brand": "LG",
+    "ratings": 5,
+    "createdAt": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "name": "Microsoft Surface Pro 7",
+    "image": "https://example.com/microsoft_surface_pro_7.jpg",
+    "description": "2-in-1 laptop with a detachable keyboard.",
+    "price": 899,
+    "category": "Computers",
+    "brand": "Microsoft",
+    "ratings": 4,
+    "createdAt": "2024-08-14T00:00:00.000Z"
+  },
+  {
+    "name": "Razer DeathAdder V2",
+    "image": "https://example.com/razer_deathadder_v2.jpg",
+    "description": "Gaming mouse with customizable RGB lighting.",
+    "price": 69,
+    "category": "Accessories",
+    "brand": "Razer",
+    "ratings": 4,
+    "createdAt": "2024-08-13T00:00:00.000Z"
+  },
+  {
+    "name": "Nest Learning Thermostat",
+    "image": "https://example.com/nest_thermostat.jpg",
+    "description": "Smart thermostat with learning capabilities.",
+    "price": 249,
+    "category": "Home",
+    "brand": "Nest",
+    "ratings": 4,
+    "createdAt": "2024-08-12T00:00:00.000Z"
+  },
+  {
+    "name": "GoPro HERO9 Black",
+    "image": "https://example.com/gopro_hero9.jpg",
+    "description": "Action camera with 5K video recording.",
+    "price": 399,
+    "category": "Electronics",
+    "brand": "GoPro",
+    "ratings": 5,
+    "createdAt": "2024-08-11T00:00:00.000Z"
+  },
+  {
+    "name": "Canon EOS R5",
+    "image": "https://example.com/canon_eos_r5.jpg",
+    "description": "Mirrorless camera with 8K video capabilities.",
+    "price": 3899,
+    "category": "Electronics",
+    "brand": "Canon",
+    "ratings": 5,
+    "createdAt": "2024-08-10T00:00:00.000Z"
+  },
+  {
+    "name": "Sony A7III",
+    "image": "https://example.com/sony_a7iii.jpg",
+    "description": "Full-frame mirrorless camera with excellent low-light performance.",
+    "price": 1999,
+    "category": "Electronics",
+    "brand": "Sony",
+    "ratings": 5,
+    "createdAt": "2024-08-09T00:00:00.000Z"
+  },
+  {
+    "name": "JBL Flip 5",
+    "image": "https://example.com/jbl_flip_5.jpg",
+    "description": "Portable Bluetooth speaker with waterproof design.",
+    "price": 119,
+    "category": "Electronics",
+    "brand": "JBL",
+    "ratings": 4,
+    "createdAt": "2024-08-08T00:00:00.000Z"
+  },
+  {
+    "name": "Apple Watch Series 6",
+    "image": "https://example.com/apple_watch_series_6.jpg",
+    "description": "Smartwatch with health tracking features.",
+    "price": 749,
+    "category": "Electronics",
+    "brand": "Apple",
+    "ratings": 4,
+    "createdAt": "2024-08-07T00:00:00.000Z"
+  },
+  {
+    "name": "Dell Alienware X17",
+    "image": "https://example.com/dell_alienware_x17.jpg",
+    "description": "High-performance gaming laptop with a large display.",
+    "price": 2599,
+    "category": "Computers",
+    "brand": "Dell",
+    "ratings": 5,
+    "createdAt": "2024-08-06T00:00:00.000Z"
+  },
+  {
+    "name": "Asus ROG Strix G15",
+    "image": "https://example.com/asus_rog_strix_g15.jpg",
+    "description": "Gaming laptop with high refresh rate display and powerful hardware.",
+    "price": 1399,
+    "category": "Computers",
+    "brand": "Asus",
+    "ratings": 5,
+    "createdAt": "2024-08-05T00:00:00.000Z"
+  },
+  {
+    "name": "Apple MacBook Pro 16\"",
+    "image": "https://example.com/macbook_pro_16.jpg",
+    "description": "High-performance laptop with a large Retina display.",
+    "price": 2399,
+    "category": "Computers",
+    "brand": "Apple",
+    "ratings": 5,
+    "createdAt": "2024-08-04T00:00:00.000Z"
+  },
+  {
+    "name": "LG UltraGear 27GN950",
+    "image": "https://example.com/lg_27gn950.jpg",
+    "description": "27-inch 4K UHD gaming monitor with high refresh rate.",
+    "price": 799,
+    "category": "Electronics",
+    "brand": "LG",
+    "ratings": 4,
+    "createdAt": "2024-08-03T00:00:00.000Z"
+  },
+  {
+    "name": "Logitech MX Master 3",
+    "image": "https://example.com/logitech_mx_master_3.jpg",
+    "description": "Advanced wireless mouse with customizable buttons.",
+    "price": 99,
+    "category": "Accessories",
+    "brand": "Logitech",
+    "ratings": 4,
+    "createdAt": "2024-08-02T00:00:00.000Z"
+  },
+  {
+    "name": "Samsung QLED 8K TV",
+    "image": "https://example.com/samsung_qled_8k.jpg",
+    "description": "8K QLED TV with exceptional picture quality.",
+    "price": 2999,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "ratings": 5,
+    "createdAt": "2024-08-01T00:00:00.000Z"
+  },
+  {
+    "name": "Nikon Z6 II",
+    "image": "https://example.com/nikon_z6_ii.jpg",
+    "description": "Full-frame mirrorless camera with dual processors.",
+    "price": 1999,
+    "category": "Electronics",
+    "brand": "Nikon",
+    "ratings": 5,
+    "createdAt": "2024-07-31T00:00:00.000Z"
+  },
+  {
+    "name": "HP Spectre x360",
+    "image": "https://example.com/hp_spectre_x360.jpg",
+    "description": "Convertible laptop with a 360-degree hinge and high performance.",
+    "price": 1199,
+    "category": "Computers",
+    "brand": "HP",
+    "ratings": 4,
+    "createdAt": "2024-07-30T00:00:00.000Z"
+  },
+  {
+    "name": "GoPro HERO10 Black",
+    "image": "https://example.com/gopro_hero10.jpg",
+    "description": "Action camera with advanced stabilization and 5.3K video.",
+    "price": 499,
+    "category": "Electronics",
+    "brand": "GoPro",
+    "ratings": 5,
+    "createdAt": "2024-07-29T00:00:00.000Z"
+  },
+  {
+    "name": "Acer Predator Helios 300",
+    "image": "https://example.com/acer_predator_helios_300.jpg",
+    "description": "Gaming laptop with powerful specs and a 144Hz display.",
+    "price": 1599,
+    "category": "Computers",
+    "brand": "Acer",
+    "ratings": 4,
+    "createdAt": "2024-07-28T00:00:00.000Z"
+  },
+  {
+    "name": "Samsung Galaxy Watch 4",
+    "image": "https://example.com/samsung_galaxy_watch_4.jpg",
+    "description": "Smartwatch with advanced health and fitness features.",
+    "price": 249,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "ratings": 4,
+    "createdAt": "2024-07-27T00:00:00.000Z"
+  },
+  {
+    "name": "Google Pixel 6",
+    "image": "https://example.com/google_pixel_6.jpg",
+    "description": "Google's latest smartphone with excellent camera performance.",
+    "price": 599,
+    "category": "Electronics",
+    "brand": "Google",
+    "ratings": 4,
+    "createdAt": "2024-07-26T00:00:00.000Z"
+  },
+  {
+    "name": "Samsung Frame TV",
+    "image": "https://example.com/samsung_frame_tv.jpg",
+    "description": "Smart TV that doubles as a piece of art.",
+    "price": 1299,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "ratings": 4,
+    "createdAt": "2024-07-25T00:00:00.000Z"
+  },
+  {
+    "name": "Jabra Elite 75t",
+    "image": "https://example.com/jabra_elite_75t.jpg",
+    "description": "True wireless earbuds with a secure fit and good sound quality.",
+    "price": 179,
+    "category": "Electronics",
+    "brand": "Jabra",
+    "ratings": 4,
+    "createdAt": "2024-07-24T00:00:00.000Z"
+  },
+  {
+    "name": "Sony WH-XB900N",
+    "image": "https://example.com/sony_wh_xb900n.jpg",
+    "description": "Extra bass headphones with noise cancelling.",
+    "price": 249,
+    "category": "Electronics",
+    "brand": "Sony",
+    "ratings": 4,
+    "createdAt": "2024-07-23T00:00:00.000Z"
+  },
+  {
+    "name": "Panasonic Lumix GH5",
+    "image": "https://example.com/panasonic_lumix_gh5.jpg",
+    "description": "Micro Four Thirds camera with excellent video recording capabilities.",
+    "price": 1399,
+    "category": "Electronics",
+    "brand": "Panasonic",
+    "ratings": 4,
+    "createdAt": "2024-07-22T00:00:00.000Z"
+  },
+  {
+    "name": "Oculus Quest 2",
+    "image": "https://example.com/oculus_quest_2.jpg",
+    "description": "Standalone VR headset with immersive experiences.",
+    "price": 299,
+    "category": "Electronics",
+    "brand": "Oculus",
+    "ratings": 5,
+    "createdAt": "2024-07-21T00:00:00.000Z"
+  },
+  {
+    "name": "Microsoft Xbox Series X",
+    "image": "https://example.com/xbox_series_x.jpg",
+    "description": "Next-gen gaming console with powerful specs.",
+    "price": 499,
+    "category": "Electronics",
+    "brand": "Microsoft",
+    "ratings": 5,
+    "createdAt": "2024-07-20T00:00:00.000Z"
+  },
+  {
+    "name": "Sony PlayStation 5",
+    "image": "https://example.com/playstation_5.jpg",
+    "description": "Next-gen gaming console with impressive graphics.",
+    "price": 499,
+    "category": "Electronics",
+    "brand": "Sony",
+    "ratings": 5,
+    "createdAt": "2024-07-19T00:00:00.000Z"
+  },
+  {
+    "name": "Nvidia GeForce RTX 3080",
+    "image": "https://example.com/nvidia_geforce_rtx_3080.jpg",
+    "description": "High-end graphics card for gaming and content creation.",
+    "price": 699,
+    "category": "Electronics",
+    "brand": "Nvidia",
+    "ratings": 5,
+    "createdAt": "2024-07-18T00:00:00.000Z"
+  },
+  {
+    "name": "Intel Core i9-12900K",
+    "image": "https://example.com/intel_core_i9_12900k.jpg",
+    "description": "High-performance CPU for gaming and professional tasks.",
+    "price": 589,
+    "category": "Electronics",
+    "brand": "Intel",
+    "ratings": 5,
+    "createdAt": "2024-07-17T00:00:00.000Z"
+  },
+  {
+    "name": "Corsair Vengeance LPX 32GB",
+    "image": "https://example.com/corsair_vengeance_lpx_32gb.jpg",
+    "description": "High-speed DDR4 RAM for gaming and multitasking.",
+    "price": 159,
+    "category": "Electronics",
+    "brand": "Corsair",
+    "ratings": 4,
+    "createdAt": "2024-07-16T00:00:00.000Z"
+  },
+  {
+    "name": "Samsung T7 Portable SSD 1TB",
+    "image": "https://example.com/samsung_t7_portable_ssd.jpg",
+    "description": "Fast and portable external SSD for data storage.",
+    "price": 129,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "ratings": 4,
+    "createdAt": "2024-07-15T00:00:00.000Z"
+  },
+  {
+    "name": "Western Digital My Passport 2TB",
+    "image": "https://example.com/wd_my_passport_2tb.jpg",
+    "description": "Portable external hard drive with large storage capacity.",
+    "price": 89,
+    "category": "Electronics",
+    "brand": "Western Digital",
+    "ratings": 4,
+    "createdAt": "2024-07-14T00:00:00.000Z"
+  },
+  {
+    "name": "Bose SoundLink Revolve+",
+    "image": "https://example.com/bose_soundlink_revolve_plus.jpg",
+    "description": "Portable Bluetooth speaker with 360-degree sound.",
+    "price": 299,
+    "category": "Electronics",
+    "brand": "Bose",
+    "ratings": 4,
+    "createdAt": "2024-07-13T00:00:00.000Z"
+  },
+  {
+    "name": "JBL Charge 4",
+    "image": "https://example.com/jbl_charge_4.jpg",
+    "description": "Portable Bluetooth speaker with long battery life.",
+    "price": 149,
+    "category": "Electronics",
+    "brand": "JBL",
+    "ratings": 4,
+    "createdAt": "2024-07-12T00:00:00.000Z"
+  },
+  {
+    "name": "Eero Pro 6",
+    "image": "https://example.com/eero_pro_6.jpg",
+    "description": "Tri-band mesh WiFi system for better home coverage.",
+    "price": 599,
+    "category": "Electronics",
+    "brand": "Eero",
+    "ratings": 4,
+    "createdAt": "2024-07-11T00:00:00.000Z"
+  },
+  {
+    "name": "Google Nest Hub Max",
+    "image": "https://example.com/google_nest_hub_max.jpg",
+    "description": "Smart display with Google Assistant.",
+    "price": 229,
+    "category": "Home",
+    "brand": "Google",
+    "ratings": 4,
+    "createdAt": "2024-07-10T00:00:00.000Z"
+  },
+  {
+    "name": "Ring Video Doorbell Pro 2",
+    "image": "https://example.com/ring_video_doorbell_pro_2.jpg",
+    "description": "High-definition video doorbell with advanced features.",
+    "price": 249,
+    "category": "Home",
+    "brand": "Ring",
+    "ratings": 4,
+    "createdAt": "2024-07-09T00:00:00.000Z"
+  },
+  {
+    "name": "Dyson V11 Torque Drive",
+    "image": "https://example.com/dyson_v11_torque_drive.jpg",
+    "description": "Cordless vacuum with powerful suction.",
+    "price": 599,
+    "category": "Home",
+    "brand": "Dyson",
+    "ratings": 5,
+    "createdAt": "2024-07-08T00:00:00.000Z"
+  },
+  {
+    "name": "iRobot Roomba i7+",
+    "image": "https://example.com/irobot_roomba_i7_plus.jpg",
+    "description": "Robot vacuum with smart mapping and self-cleaning base.",
+    "price": 799,
+    "category": "Home",
+    "brand": "iRobot",
+    "ratings": 5,
+    "createdAt": "2024-07-07T00:00:00.000Z"
+  },
+  {
+    "name": "Keurig K-Elite",
+    "image": "https://example.com/keurig_k_elite.jpg",
+    "description": "Single-serve coffee maker with strong brew option.",
+    "price": 179,
+    "category": "Home",
+    "brand": "Keurig",
+    "ratings": 4,
+    "createdAt": "2024-07-06T00:00:00.000Z"
+  },
+  {
+    "name": "Instant Pot Duo 7-in-1",
+    "image": "https://example.com/instant_pot_duo_7_in_1.jpg",
+    "description": "Multifunctional pressure cooker with seven cooking modes.",
+    "price": 89,
+    "category": "Home",
+    "brand": "Instant Pot",
+    "ratings": 4,
+    "createdAt": "2024-07-05T00:00:00.000Z"
+  },
+  {
+    "name": "Breville Barista Express",
+    "image": "https://example.com/breville_barista_express.jpg",
+    "description": "Espresso machine with built-in grinder.",
+    "price": 799,
+    "category": "Home",
+    "brand": "Breville",
+    "ratings": 5,
+    "createdAt": "2024-07-04T00:00:00.000Z"
+  },
+  {
+    "name": "Crock-Pot 7-Quart",
+    "image": "https://example.com/crock_pot_7_quart.jpg",
+    "description": "Large slow cooker with programmable settings.",
+    "price": 59,
+    "category": "Home",
+    "brand": "Crock-Pot",
+    "ratings": 4,
+    "createdAt": "2024-07-03T00:00:00.000Z"
+  },
+  {
+    "name": "Ninja Foodi 9-in-1",
+    "image": "https://example.com/ninja_foodi_9_in_1.jpg",
+    "description": "Multi-cooker with air fry, pressure cook, and more functions.",
+    "price": 249,
+    "category": "Home",
+    "brand": "Ninja",
+    "ratings": 4,
+    "createdAt": "2024-07-02T00:00:00.000Z"
+  },
+  {
+    "name": "Philips Hue White and Color",
+    "image": "https://example.com/philips_hue_white_color.jpg",
+    "description": "Smart light bulbs with adjustable colors.",
+    "price": 199,
+    "category": "Home",
+    "brand": "Philips",
+    "ratings": 4,
+    "createdAt": "2024-07-01T00:00:00.000Z"
+  }
+]
