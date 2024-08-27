@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Zendesk | Login</title>
+        <title>EasyBooking | Login</title>
       </Helmet>
 
       <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">

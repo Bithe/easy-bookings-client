@@ -18,7 +18,7 @@ const FilterComponent = () => {
       try {
         setLoading(true);
 
-        const { data } = await axios.get('http://localhost:5000/products', {
+        const { data } = await axios.get('https://easy-bookings-server.vercel.app/products', {
           params: {
             page,
             search,

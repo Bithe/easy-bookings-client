@@ -61,12 +61,13 @@ const Navbar = () => {
 
           {/*  */}
         </div>
-        {/* <div className="navbar-center hidden lg:flex">
+
+        <div className="navbar-center  lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <a href="/" className="lg:text-2xl font-bold">Home</a>
             </li>
-            <li>
+            {/* <li>
               <details>
                 <summary>Parent</summary>
                 <ul className="p-2">
@@ -81,9 +82,9 @@ const Navbar = () => {
             </li>
             <li>
               <a>Item 3</a>
-            </li>
+            </li> */}
           </ul>
-        </div> */}
+        </div>
         <div className="navbar-end gap-4">
 
           <div className="gap-4 flex">
