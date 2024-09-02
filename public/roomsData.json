@@ -1,0 +1,182 @@
+[
+    {
+        "location": "Malibu, CA, USA",
+        "category": "Beach",
+        "title": "Oceanfront Malibu Beach House",
+        "from": "2024-09-10T15:00:00",
+        "to": "2024-09-15T11:00:00",
+        "price": 800,
+        "guests": 6,
+        "bathrooms": 3,
+        "bedrooms": 3,
+        "host": {
+            "name": "Sarah Johnson",
+            "image": "https://example.com/images/sarahjohnson.jpg",
+            "email": "sarah.johnson@example.com"
+        },
+        "description": "A stunning beachfront house with direct access to the Malibu shores.",
+        "image": "https://example.com/images/malibu_beach_house.jpg"
+    },
+    {
+        "location": "Amsterdam, Netherlands",
+        "category": "Windmills",
+        "title": "Historic Windmill Stay",
+        "from": "2024-10-01T16:00:00",
+        "to": "2024-10-07T10:00:00",
+        "price": 400,
+        "guests": 4,
+        "bathrooms": 1,
+        "bedrooms": 2,
+        "host": {
+            "name": "Jan van der Meer",
+            "image": "https://example.com/images/janvandermeer.jpg",
+            "email": "jan.vandermeer@example.com"
+        },
+        "description": "Experience the charm of staying in a traditional Dutch windmill.",
+        "image": "https://example.com/images/amsterdam_windmill.jpg"
+    },
+    {
+        "location": "Los Angeles, CA, USA",
+        "category": "Modern",
+        "title": "Sleek Modern Home in Beverly Hills",
+        "from": "2024-09-20T14:00:00",
+        "to": "2024-09-25T12:00:00",
+        "price": 1000,
+        "guests": 8,
+        "bathrooms": 4,
+        "bedrooms": 4,
+        "host": {
+            "name": "Michael Lee",
+            "image": "https://example.com/images/michaellee.jpg",
+            "email": "michael.lee@example.com"
+        },
+        "description": "A luxurious modern home with state-of-the-art amenities in the heart of Beverly Hills.",
+        "image": "https://example.com/images/beverly_hills_modern.jpg"
+    },
+    {
+        "location": "Tuscany, Italy",
+        "category": "Countryside",
+        "title": "Rustic Countryside Villa",
+        "from": "2024-11-01T15:00:00",
+        "to": "2024-11-10T11:00:00",
+        "price": 350,
+        "guests": 6,
+        "bathrooms": 2,
+        "bedrooms": 3,
+        "host": {
+            "name": "Luca Rossi",
+            "image": "https://example.com/images/lucarossi.jpg",
+            "email": "luca.rossi@example.com"
+        },
+        "description": "Enjoy the tranquility of the Tuscan countryside in this charming villa.",
+        "image": "https://example.com/images/tuscany_villa.jpg"
+    },
+    {
+        "location": "Santorini, Greece",
+        "category": "Pools",
+        "title": "Santorini Cliffside Villa with Infinity Pool",
+        "from": "2024-10-15T14:00:00",
+        "to": "2024-10-22T12:00:00",
+        "price": 900,
+        "guests": 4,
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "host": {
+            "name": "Elena Papadopoulos",
+            "image": "https://example.com/images/elenapapadopoulos.jpg",
+            "email": "elena.papadopoulos@example.com"
+        },
+        "description": "A luxurious villa with an infinity pool overlooking the stunning caldera of Santorini.",
+        "image": "https://example.com/images/santorini_pool_villa.jpg"
+    },
+    {
+        "location": "Bora Bora, French Polynesia",
+        "category": "Islands",
+        "title": "Overwater Bungalow in Bora Bora",
+        "from": "2024-12-05T16:00:00",
+        "to": "2024-12-12T10:00:00",
+        "price": 1200,
+        "guests": 2,
+        "bathrooms": 1,
+        "bedrooms": 1,
+        "host": {
+            "name": "Teva Mahina",
+            "image": "https://example.com/images/tevamahina.jpg",
+            "email": "teva.mahina@example.com"
+        },
+        "description": "A romantic overwater bungalow with stunning views of the lagoon.",
+        "image": "https://example.com/images/borabora_bungalow.jpg"
+    },
+    {
+        "location": "Lake Tahoe, CA, USA",
+        "category": "Lake",
+        "title": "Cozy Cabin by Lake Tahoe",
+        "from": "2024-09-25T15:00:00",
+        "to": "2024-09-30T11:00:00",
+        "price": 500,
+        "guests": 5,
+        "bathrooms": 2,
+        "bedrooms": 3,
+        "host": {
+            "name": "Emily Thompson",
+            "image": "https://example.com/images/emilythompson.jpg",
+            "email": "emily.thompson@example.com"
+        },
+        "description": "A charming cabin nestled in the woods with direct access to Lake Tahoe.",
+        "image": "https://example.com/images/lake_tahoe_cabin.jpg"
+    },
+    {
+        "location": "Aspen, CO, USA",
+        "category": "Skiing",
+        "title": "Luxury Ski-in/Ski-out Chalet",
+        "from": "2024-12-20T15:00:00",
+        "to": "2024-12-27T11:00:00",
+        "price": 1500,
+        "guests": 10,
+        "bathrooms": 5,
+        "bedrooms": 5,
+        "host": {
+            "name": "David Carter",
+            "image": "https://example.com/images/davidcarter.jpg",
+            "email": "david.carter@example.com"
+        },
+        "description": "An exquisite chalet with direct ski-in/ski-out access to Aspen Mountain.",
+        "image": "https://example.com/images/aspen_chalet.jpg"
+    },
+    {
+        "location": "Edinburgh, Scotland",
+        "category": "Castles",
+        "title": "Historic Scottish Castle",
+        "from": "2024-10-10T14:00:00",
+        "to": "2024-10-17T12:00:00",
+        "price": 2000,
+        "guests": 12,
+        "bathrooms": 6,
+        "bedrooms": 8,
+        "host": {
+            "name": "Alistair MacLeod",
+            "image": "https://example.com/images/alistairmacleod.jpg",
+            "email": "alistair.macleod@example.com"
+        },
+        "description": "Live like royalty in this grand Scottish castle, complete with historic charm and modern amenities.",
+        "image": "https://example.com/images/scottish_castle.jpg"
+    },
+    {
+        "location": "Dubai, UAE",
+        "category": "Lux",
+        "title": "Ultra-Modern Penthouse in Downtown Dubai",
+        "from": "2024-11-20T16:00:00",
+        "to": "2024-11-30T10:00:00",
+        "price": 2500,
+        "guests": 6,
+        "bathrooms": 4,
+        "bedrooms": 3,
+        "host": {
+            "name": "Ahmed Al-Farsi",
+            "image": "https://example.com/images/ahmedalfarsi.jpg",
+            "email": "ahmed.alfarsi@example.com"
+        },
+        "description": "Experience luxury in this ultra-modern penthouse with panoramic views of the Burj Khalifa.",
+        "image": "https://example.com/images/dubai_penthouse.jpg"
+    }
+]
