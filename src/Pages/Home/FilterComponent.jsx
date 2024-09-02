@@ -18,7 +18,20 @@ const FilterComponent = () => {
       try {
         setLoading(true);
 
-        const { data } = await axios.get('https://easy-bookings-server.vercel.app/products', {
+        // const { data } = await axios.get('https://easy-bookings-server.vercel.app/products', {
+        //   params: {
+        //     page,
+        //     search,
+        //     category,
+        //     brand,
+        //     priceMin,
+        //     priceMax,
+        //     sort,
+        //   },
+        // });
+
+
+        const { data } = await axios.get('http://localhost:5000/products', {
           params: {
             page,
             search,
@@ -29,6 +42,9 @@ const FilterComponent = () => {
             sort,
           },
         });
+
+
+
         
 
         setProducts(data.products); 
@@ -115,10 +131,10 @@ const FilterComponent = () => {
       ) : (
         <div className='m-8'>
           {products && products.length > 0 ? (
-            <ul>
+            <ul className=''>
               {products.map((product) => (
-                <li key={product._id}>
-                  <img src={product.image} alt={product.name} width="100" />
+                <li className='border rounded-lg ' key={product._id}>
+                  <img className='text-center flex justify-center items-center  border' src={product.image} alt={product.name} width="100" />
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <p>Price: ${product.price}</p>
