@@ -1,7 +1,38 @@
+import { useQuery } from "@tanstack/react-query";
 import { IoIosClock } from "react-icons/io";
-
+import { axiosSecure } from "../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 const Rooms = () => {
+  const { data = [], isLoading } = useQuery({
+    queryKey: ["rooms"],
+    queryFn: async () => {
+      const { data } = await axiosSecure.get("/rooms");
+      return data;
+    },
+  });
+  console.log(data);
+
+  if (isLoading) {
+    return (
+      <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+        <div className="animate-pulse flex space-x-4">
+          <div className="rounded-full bg-slate-200 h-10 w-10"></div>
+          <div className="flex-1 space-y-6 py-1">
+            <div className="h-2 bg-slate-200 rounded"></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="h-2 bg-slate-200 rounded col-span-2"></div>
+                <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+              </div>
+              <div className="h-2 bg-slate-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
       <div className="border-b mb-5 flex justify-between text-sm">
@@ -34,125 +65,66 @@ const Rooms = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {/* CARD1 */}
+        {/* CARD */}
 
-        <div className="rounded overflow-hidden shadow-lg flex flex-col">
-          <a href="#"></a>
-          <div className="relative">
-            <a href="#">
-              <img
-                className="w-full"
-                src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                alt="Sunset in the mountains"
-              />
-              <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-            </a>
-            <a href="#!">
-              <div className="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                Avaialable
+        {data.map((room) => (
+          <div key={room._id} className="items-stretch">
+            <Link to={`/room/${room._id}`}>
+              <div className="rounded overflow-hidden shadow-lg flex flex-col h-full">
+                <a href="#"></a>
+                <div className="relative">
+                  <a href="#">
+                    <img
+                      className="w-full h-[15rem] "
+                      src={room.image}
+                      alt="Sunset in the mountains"
+                    />
+                    <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                  </a>
+                  <a href="#!">
+                    <div className="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                      Avaialable
+                    </div>
+                  </a>
+                </div>
+                <div className="px-6 py-4 mb-auto">
+                  <a
+                    href="#"
+                    className="font-medium text-lg hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
+                  >
+                    {room.title}{" "}
+                  </a>
+                  <p className="text-gray-500 text-sm">{room.description}</p>
+                </div>
+                <div className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+                  <span
+                    href="#"
+                    className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                  >
+                    <IoIosClock />
+
+                    <span className="ml-1">6 mins ago</span>
+                  </span>
+
+                  <span
+                    href="#"
+                    className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                  >
+                    <svg
+                      className="h-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                    </svg>
+                    <span className="ml-1">39 Comments</span>
+                  </span>
+                </div>
               </div>
-            </a>
+            </Link>
           </div>
-          <div className="px-6 py-4 mb-auto">
-            <a
-              href="#"
-              className="font-medium text-lg hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-            >
-              Simplest Salad Recipe ever
-            </a>
-            <p className="text-gray-500 text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-          <div className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
-            <span
-              href="#"
-              className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-            >
-             
-              <IoIosClock />
-
-              <span className="ml-1">6 mins ago</span>
-            </span>
-
-            <span
-              href="#"
-              className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-            >
-              <svg
-                className="h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-              </svg>
-              <span className="ml-1">39 Comments</span>
-            </span>
-          </div>
-        </div>
-
-
-        {/* CARD 2 */}
-        <div className="rounded overflow-hidden shadow-lg flex flex-col">
-          <a href="#"></a>
-          <div className="relative">
-            <a href="#">
-              <img
-                className="w-full"
-                src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                alt="Sunset in the mountains"
-              />
-              <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-            </a>
-            <a href="#!">
-              <div className="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                Avaialable
-              </div>
-            </a>
-          </div>
-          <div className="px-6 py-4 mb-auto">
-            <a
-              href="#"
-              className="font-medium text-lg hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-            >
-              Simplest Salad Recipe ever
-            </a>
-            <p className="text-gray-500 text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-          <div className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
-            <span
-              href="#"
-              className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-            >
-             
-              <IoIosClock />
-
-              <span className="ml-1">6 mins ago</span>
-            </span>
-
-            <span
-              href="#"
-              className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-            >
-              <svg
-                className="h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-              </svg>
-              <span className="ml-1">39 Comments</span>
-            </span>
-          </div>
-        </div>
-
-
+        ))}
       </div>
     </div>
   );
