@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { axiosSecure } from "../../hooks/useAxiosSecure";
 import { useParams } from "react-router-dom";
+import { axiosSecure } from "../../hooks/useAxiosSecure";
+import RoomReservation from "../../Components/RoomDetails/RoomReservation";
 
 const RoomDetails = () => {
-
     const {id} = useParams();
 
     const {data: room ={}, isLoading } = useQuery({
@@ -37,7 +37,7 @@ const RoomDetails = () => {
 
   return (
     // <title>{room?.title}</title>
-    <div className="max-w-screen-lg mx-auto">
+    <div className="max-w-screen-lg mx-auto p-4">
       {/* Header */}
       <div className="flex flex-col gap-6">
         <div>
@@ -104,7 +104,7 @@ const RoomDetails = () => {
 
         <div className="md:col-span-3 order-first md:order-last mb-10">
           {/* RoomReservation */}
-          {/* <RoomReservation room={room} /> */}
+          <RoomReservation room={room} />
         </div>
       </div>
     </div>
