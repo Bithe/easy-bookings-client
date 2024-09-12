@@ -1,222 +1,114 @@
-import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { updateProfile } from "firebase/auth";
-import { useNavigate, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { FaEyeSlash } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
-import { AuthContext } from "../../Components/AuthProvide/AuthProvider";
+import logoVideo from "../../../../public/logoVideo.mp4";
 
 const Register = () => {
-  const { registerUser, setUser } = useContext(AuthContext);
-
-  console.log(registerUser);
-
-  // FOR ERROR
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-
-  // FOR SHOW PASSWORD
-  const [showPassword, setShowPassword] = useState(false);
-
-  //   NAVIGATION
-  const navigate = useNavigate();
-  const location = useLocation();
-  const back = location?.state?.from || "/";
-
-  const handleRegister = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const photo = e.target.photo.value;
-    const password = e.target.password.value;
-    console.log(name, email, photo, password);
-
-    // PASSWWORD VARIFICATION
-    if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
-      setError(
-        "Password should be 6 character, must have an Uppercase letter, a lower letter"
-      );
-      toast(
-        "Password should be 6 character, must have an Uppercase letter, a lower letter"
-      );
-      return;
-    }
-
-    //  EMAIL VARIFICATION
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(email)) {
-      setError("Please enter a valid email address");
-      toast.error("Please enter a valid email address");
-      return;
-    }
-
-    setError("");
-    setSuccess("");
-
-    registerUser(email, password, photo, name)
-      .then((result) => {
-        updateProfile(result.user, {
-          displayName: name,
-          photoURL: photo,
-        });
-
-        if (result.user) {
-          navigate(back);
-        }
-
-        setSuccess("Registration Successful");
-        toast("Registration Successful");
-        setUser(result.user);
-        return;
-      })
-      .catch((error) => {
-        console.log(error.message);
-        toast("Email already used");
-      });
-  };
-
   return (
-    <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
-      <div className="container h-full p-10">
-        <Helmet>
-          <title>EasyBooking | Register</title>
-        </Helmet>
-
-        <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
-          <div className="w-full">
-            <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
-              <div className="g-0 lg:flex lg:flex-wrap">
-                <div className="px-4 md:px-0 lg:w-6/12 rounded-lg">
-                  <img
-                    src="/registe.gif"
-                    className="w-full"
-                    alt="Sample image"
-                  />
+    <div>
+      <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+        <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+          <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+            <div>
+              <img
+                src="https://drive.google.com/uc?export=view&id=1MFiKAExRFF0-2YNpAZzIu1Sh52J8r16v"
+                className="w-mx-auto"
+              />
+              {/* LOGO VIDEO */}
+              <video
+                style={{ height: "6rem" }}
+                className="videoTag hidden lg:block"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={logoVideo} type="video/mp4" />
+              </video>
+              {/*  */}{" "}
+            </div>
+            <div className="mt-12 flex flex-col items-center">
+              <div className="w-full flex-1 mt-8">
+                <div className="flex flex-col items-center">
+                  <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-green-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
+                    <div className="bg-white p-2 rounded-full">
+                      <svg className="w-4" viewBox="0 0 533.5 544.3">
+                        <path
+                          d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
+                          fill="#4285f4"
+                        />
+                        <path
+                          d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z"
+                          fill="#34a853"
+                        />
+                        <path
+                          d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z"
+                          fill="#fbbc04"
+                        />
+                        <path
+                          d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
+                          fill="#ea4335"
+                        />
+                      </svg>
+                    </div>
+                    <span className="ml-4">Sign In with Google</span>
+                  </button>
                 </div>
 
-                <div className="flex items-center rounded-b-lg lg:w-6/12 py-8 lg:rounded-e-lg lg:rounded-bl-none justify-center ">
-                  <div className="px-4 py-6 md:mx-6 md:p-12 border rounded-lg lg:w-full">
-                    <form onSubmit={handleRegister}>
-                      <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300 dark:before:border-neutral-500 dark:after:border-neutral-500">
-                        <p className="mx-4 mb-0 text-center font-semibold dark:text-white">
-                          Register Now
-                        </p>
-                      </div>
-
-                      <div
-                        className="relative mb-6"
-                        data-twe-input-wrapper-init
-                      >
-                        User Name:
-                        <input
-                          name="name"
-                          type="text"
-                          required
-                          className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
-                          placeholder="User Name"
-                        />
-                      </div>
-
-                      <div
-                        className="relative mb-6"
-                        data-twe-input-wrapper-init
-                      >
-                        Email:{" "}
-                        <input
-                          name="email"
-                          type="email"
-                          required
-                          className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
-                          placeholder="Email address"
-                        />
-                      </div>
-
-                      <div
-                        className="relative mb-6"
-                        data-twe-input-wrapper-init
-                      >
-                        Photo:{" "}
-                        <input
-                          type="url"
-                          name="photo"
-                          className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
-                          placeholder="photo"
-                        />
-                      </div>
-
-                      <div className="relative" data-twe-input-wrapper-init>
-                        Password:{" "}
-                        <div className="relative ">
-                          <input
-                            type={showPassword ? "text" : "password"}
-                            name="password"
-                            required
-                            className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear dark:text-white dark:autofill:shadow-autofill"
-                            id="exampleFormControlInput22"
-                            placeholder="Password"
-                            style={{ paddingRight: "2.5rem" }}
-                          />
-                          {/* SHOW PASSWORD ICON */}
-                          <span
-                            className="absolute inset-y-0 right-0 flex px-2 items-center justify-end "
-                            onClick={() => setShowPassword(!showPassword)}
-                          >
-                            {showPassword ? <FaEye /> : <FaEyeSlash />}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/*  */}
-
-                      <div className="text-center py-8 lg:text-left">
-                        <button
-                          type="submit"
-                          className=" pb-2 pt-3
-                          
-                          flex items-center justify-center w-full mx-2 text-sm font-bold text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
-                         
-                        >
-                          Register
-                        </button>
-
-                        {error && (
-                          <small className="text-red-600">{error}</small>
-                        )}
-
-                        {success && (
-                          <small className="text-green-600 font-semibold">
-                            {success}
-                          </small>
-                        )}
-
-                        <div className="flex items-center justify-between pb-6 mb-0 mt-2 pt-1">
-                          <p className="mb-0 me-2 font-semibold ">
-                            Already have and account?
-                          </p>
-
-                          <NavLink to="/login">
-                            <button
-                              type="button"
-                              className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xl font-bold uppercase leading-normal text-black transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
-                              data-twe-ripple-init
-                              data-twe-ripple-color="light"
-                            >
-                              Login
-                            </button>
-                          </NavLink>
-                        </div>
-                      </div>
-                    </form>
+                <div className="my-12 border-b text-center">
+                  <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
+                    Or sign In with Cartesian E-mail
                   </div>
+                </div>
+
+                <div className="mx-auto max-w-xs">
+                  <input
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <input
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <button className="mt-5 tracking-wide font-semibold bg-green-400 text-white-500 w-full py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                    <svg
+                      className="w-6 h-6 -ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                      <circle cx="8.5" cy="7" r="4" />
+                      <path d="M20 8v6M23 11h-6" />
+                    </svg>
+                    <span className="ml-">Sign In</span>
+                  </button>
+                  <p className="mt-6 text-xs text-gray-600 text-center">
+                    I agree to abide by Cartesian Kinetics
+                    <a
+                      href="#"
+                      className="border-b border-gray-500 border-dotted"
+                    >
+                      Terms of Service
+                    </a>
+                    and its
+                    <a
+                      href="#"
+                      className="border-b border-gray-500 border-dotted"
+                    >
+                      Privacy Policy
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          <div className="flex-1 bg-green-100 text-center hidden lg:flex">
+            <div
+              className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
+              //   style="background-image: url('https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz');"
+            ></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,13 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { IoIosClock } from "react-icons/io";
 import { axiosSecure } from "../../hooks/useAxiosSecure";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Rooms = () => {
+  const [params, setParams] = useSearchParams();
+  const category = params.get("category");
+
   const { data = [], isLoading } = useQuery({
     queryKey: ["rooms"],
     queryFn: async () => {
-      const { data } = await axiosSecure.get("/rooms");
+      const { data } = await axiosSecure.get(`/rooms?category=${category}`);
       return data;
     },
   });
