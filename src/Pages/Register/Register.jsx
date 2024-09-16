@@ -1,5 +1,5 @@
-import logoVideo from "../../../../public/logoVideo.mp4";
 
+// import registerImg from "../../assets/register.webp";
 const Register = () => {
   return (
     <div>
@@ -8,11 +8,11 @@ const Register = () => {
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div>
               <img
-                src="https://drive.google.com/uc?export=view&id=1MFiKAExRFF0-2YNpAZzIu1Sh52J8r16v"
+                // src={registerImg}
                 className="w-mx-auto"
               />
               {/* LOGO VIDEO */}
-              <video
+              {/* <video
                 style={{ height: "6rem" }}
                 className="videoTag hidden lg:block"
                 autoPlay
@@ -20,7 +20,7 @@ const Register = () => {
                 muted
               >
                 <source src={logoVideo} type="video/mp4" />
-              </video>
+              </video> */}
               {/*  */}{" "}
             </div>
             <div className="mt-12 flex flex-col items-center">
@@ -60,8 +60,14 @@ const Register = () => {
                 <div className="mx-auto max-w-xs">
                   <input
                     className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <input
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                     type="email"
                     placeholder="Email"
+
                   />
                   <input
                     className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
@@ -78,7 +84,7 @@ const Register = () => {
                       <circle cx="8.5" cy="7" r="4" />
                       <path d="M20 8v6M23 11h-6" />
                     </svg>
-                    <span className="ml-">Sign In</span>
+                    <span className="ml-1">Sign In</span>
                   </button>
                   <p className="mt-6 text-xs text-gray-600 text-center">
                     I agree to abide by Cartesian Kinetics
@@ -103,8 +109,9 @@ const Register = () => {
           <div className="flex-1 bg-green-100 text-center hidden lg:flex">
             <div
               className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-              //   style="background-image: url('https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz');"
-            ></div>
+              style={{backgroundImage: "url('https://i.ibb.co/Kss2ZBH/0262f2a4841a14755bd96261e11b6334.gif')"}}
+            >
+            </div>
           </div>
         </div>
       </div>

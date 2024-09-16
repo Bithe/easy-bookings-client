@@ -90,21 +90,16 @@ const Navbar = () => {
           <div className="gap-4 flex">
               <NavLink
                 to="/login"
-                className="btn bg-[#3b56d0] text-white font-semibold text-lg hover:text-black"
-                style={{
-                  background:
-                    "linear-gradient(90deg, bg-teal-500 0%, bg-blue-500 35%, bg-blue-500 100%)",
-                }}
+                className="btn font-semibold text-lg hover:text-black
+                
+                tracking-wide bg-green-400 text-white-500 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
               >
                 Login
               </NavLink>
               <NavLink
                 to="/register"
-                className="btn bg-[#3b56d0] text-white font-semibold text-lg hover:text-black"
-                style={{
-                  background:
-                    "linear-gradient(90deg, bg-teal-500 0%, bg-blue-500 35%, bg-blue-500 100%)",
-                }}
+                className="btn font-semibold text-lg hover:text-black
+                tracking-wide bg-green-400 text-white-500 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-non"
               >
                 Register
               </NavLink>{" "}

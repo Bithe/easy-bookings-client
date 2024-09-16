@@ -1,34 +1,13 @@
-
 const Footer = () => {
   return (
-    <div className="py-8">
+    <div className="">
       <footer>
-        <div className="bg-gray-800  py-4 text-gray-400">
+        <div className="bg-green-200  py-4 text-black-400">
           <div className="container px-4 mx-auto">
             <div className="-mx-4 flex flex-wrap justify-between">
-              <div className="px-4 my-4 w-full xl:w-1/5">
-                <a href="/" className="block w-56 mb-10">
-                  <svg
-                    version="1.1"
-                    viewBox="0 0 3368 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g fill="none" fillRule="evenodd">
-                      <g transform="translate(0 -75)">
-                 
-                        <text
-                          fill="white"
-                          fontFamily="Nunito-Bold, Nunito"
-                          fontSize="512"
-                          fontWeight="bold"
-                        >
-                          <tspan x="654" y="518">
-                            Easy Booking
-                          </tspan>
-                        </text>
-                      </g>
-                    </g>
-                  </svg>
+              <div className="px-8 my-4 w-full xl:w-1/5">
+                <a href="/" className="block w-20 mb-10">
+                <img src="https://i.ibb.co/Qmtnqxd/02-pins-animated.gif"></img>
                 </a>
                 <p className="text-justify">
                   Tailwindow is a collection of UI Components created using
@@ -40,7 +19,7 @@ const Footer = () => {
 
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">
                     Company
                   </h2>
                 </div>
@@ -69,7 +48,7 @@ const Footer = () => {
               </div>
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">
                     Blog
                   </h2>
                 </div>
@@ -103,7 +82,7 @@ const Footer = () => {
               </div>
               <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-green-600">
                     Connect With Us
                   </h2>
                 </div>
@@ -159,7 +138,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-900 py-4 text-gray-400">
+        <div className="bg-green-300 py-4 text-black-400">
           <div className="container mx-auto text-center">
             &copy;2024 EasyBooking. All rights reserved. Crafted with ♥ by
             Farzana

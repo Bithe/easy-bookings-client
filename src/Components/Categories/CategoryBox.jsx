@@ -29,7 +29,7 @@ const CategoryBox = ({ label, icon: Icon }) => {
         border-b-2
         hover:text-neutral-800
         transition
-        cursor-pointer ${category === label ?  "border-b-blue-800 text-blue" : "border-transparent"}`}
+        cursor-pointer ${category === label ?  "border-b-green-800 text-blue" : "border-transparent"}`}
     >
       <Icon size={26}></Icon>
       <div className="text-sm font-medium">{label}</div>{" "}
