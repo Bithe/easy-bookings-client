@@ -1,8 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import b1 from "../../assets/b1.jpg";
-import b2 from "../../assets/b2.jpg";
-import b3 from "../../assets/b3.avif";
+import b2 from "../../assets/car2.jpg";
+import b3 from "../../assets/car1.jpg";
 
 const Banner = () => {
   return (
