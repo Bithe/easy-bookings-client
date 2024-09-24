@@ -1,4 +1,5 @@
 import Categories from "../../Components/Categories/Categories";
+import ClientReview from "../../Components/Home/ClientReview";
 import Rooms from "../../Components/Home/Rooms";
 import Banner from "./Banner";
 import Category from "./Category";
@@ -13,6 +14,7 @@ const Home = () => {
        
         <Category></Category>
         <Rooms></Rooms>
+        <ClientReview></ClientReview>
 
 
         {/* FOR SEARCHING ALL THINGS */}
