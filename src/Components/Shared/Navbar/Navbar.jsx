@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-// import logoVideo from "../../../../public/logoVideo.mp4";
+import logoVideo from "../../../../public/logoVideo.mp4";
 
 const Navbar = () => {
   return (
-    <div className="container mx-auto  lg:px-20 lg:py-2 fixed bg-opacity-50 z-10 bg-white">
+    <div className=" mx-auto  lg:px-20 lg:py-2 fixed bg-opacity-50 z-10 bg-white w-full">
       <div className="navbar ">
         <div className="navbar-start">
           
@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
 
           {/* LOGO VIDEO */}
-          {/* <video
+          <video
             style={{ height: "6rem" }}
             className="videoTag hidden lg:block"
             autoPlay
@@ -57,21 +57,16 @@ const Navbar = () => {
             muted
           >
             <source src={logoVideo} type="video/mp4" />
-          </video> */}
+          </video>
 
           {/*  */}
-          <h1 className="font-extrabold text-4xl ">GoWheel</h1>
+         
         </div>
 
         <div className="navbar-center  lg:flex">
           <ul className="menu menu-horizontal px-1 flex justify-between">
+           
             <li>
-              <a href="/" className="lg:text-2xl mr-4 font-bold  hover:bg-[#161616] hover:text-white">Home</a>
-            </li>
-            <li>
-              <a href="/" className="lg:text-2xl font-bold hover:bg-[#161616] hover:text-white">About</a>
-            </li>
-            {/* <li>
               <details>
                 <summary>Parent</summary>
                 <ul className="p-2">
@@ -86,7 +81,7 @@ const Navbar = () => {
             </li>
             <li>
               <a>Item 3</a>
-            </li> */}
+            </li> 
           </ul>
         </div>
         <div className="navbar-end gap-4">
@@ -97,7 +92,7 @@ const Navbar = () => {
                 // className="btn font-semibold text-lg hover:text-black
                 
                 // tracking-wide bg-green-400 text-white-500 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-                className="uppercase py-2 px-4 rounded-lg bg-[#ff4c30] border-2 border-transparent text-white text-md mr-4 hover:bg-[#161616] font-bold"
+                className="uppercase py-2 px-4 rounded-lg bg-[#3f9789] border-2 border-transparent text-white text-md mr-4 hover:bg-[#43ada7] font-bold"
               >
                 Login
               </NavLink>
@@ -105,7 +100,7 @@ const Navbar = () => {
                 to="/register"
                 // className="btn font-semibold text-lg hover:text-black
                 // tracking-wide bg-green-400 text-white-500 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-non"
-                 className="uppercase py-2 px-4 rounded-lg bg-[#ff4c30] border-2 border-transparent text-white text-md mr-4 hover:bg-[#161616] font-bold"
+                 className="uppercase py-2 px-4 rounded-lg bg-[#3f9789] border-2 border-transparent text-white text-md mr-4 hover:bg-[#43ada7] font-bold"
               >
                 Register
               </NavLink>{" "}

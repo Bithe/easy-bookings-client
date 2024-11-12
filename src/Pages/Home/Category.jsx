@@ -27,11 +27,11 @@ const Category = () => {
         <Swiper
           speed={3000}
           autoplay={{
-            delay: 3000, // Time delay between transitions in milliseconds
+            delay: 300000000, // Time delay between transitions in milliseconds
             disableOnInteraction: false, // Autoplay won't be disabled after user interaction
           }}
           slidesPerView={4}
-          spaceBetween={30}
+          spaceBetween={-30}
           centeredSlides={true}
           pagination={{
             clickable: true,
@@ -39,47 +39,48 @@ const Category = () => {
           modules={[Pagination, Autoplay]}
           className="mySwiper  "
         >
-          <SwiperSlide className="pb-24 ">
-            <img src={c1} className=" "></img>
-            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
+          
+          <SwiperSlide className="w-full  mx-auto h-full pb-24 ">
+            <img src={c1} className="w-full "></img>
+            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10 ">
               Beach
             </h3>
           </SwiperSlide>
-          <SwiperSlide>
-            <img src={c2} className=""></img>
-            <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
+          <SwiperSlide className="w-full h-full">
+            <img src={c2} className="w-full"></img>
+            <h3 className="lg:text-3xl flex justify-center items-center text-center text-base text-white font-bold lg:font-extrabold uppercase lg:-mt-24 -mt-10">
             Windmills
             </h3>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={c3} className=""></img>
+            <img src={c3} className="w-full"></img>
             <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
             Modern
 
             </h3>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={c4} className=""></img>
+            <img src={c4} className="w-full"></img>
             <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
             Countryside
 
             </h3>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={c5} className=""></img>
+            <img src={c5} className="w-full"></img>
             <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
             Pools
             </h3>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={c6} className=""></img>
+            <img src={c6} className="w-full"></img>
             <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
             Islands
 
             </h3>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={c7} className=""></img>
+            <img src={c7} className="w-full"></img>
             <h3 className="lg:text-3xl text-base text-white font-bold lg:font-extrabold uppercase text-center lg:-mt-24 -mt-10">
               Beach
             </h3>
